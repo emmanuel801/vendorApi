@@ -1,7 +1,6 @@
 import foodModel from '../models/foodModel.js'
 
 
-
 //Read All Operations
 export const getFood = async (req, res)=>{
        try {
@@ -37,6 +36,7 @@ export const getSingleFood = async (req,res)=>{
 export const createFood = async (req,res)=>{
     try {
         const{body} =req
+        
         const foods = new foodModel(body)
         await foods.save()
         return res.status(201).json({message: "user created successfully", foods:foods})

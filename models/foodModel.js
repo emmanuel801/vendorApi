@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const foodSchema = new mongoose.Schema({
+const foodSchema =  mongoose.Schema({
     foodid: {
         type: String,
     },
@@ -17,10 +17,6 @@ const foodSchema = new mongoose.Schema({
     },
     category: {
         type: String
-    },
-    available: {
-        type: Boolean,
-        defaultValue: true
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,
