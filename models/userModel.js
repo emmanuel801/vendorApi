@@ -4,7 +4,6 @@ const userSchema = mongoose.Schema({
   username: {
     type: String,
     required: [true, "Username Required"],
-    // trim: true,
   },
   phonenumber: {
     type: String,
@@ -27,7 +26,7 @@ const userSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "user"
 }
-}, { timestamps: true });
+}, {timestamps: true});
 
 const userModel = mongoose.model("userModel", userSchema);
 

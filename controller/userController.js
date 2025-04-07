@@ -19,12 +19,12 @@ export const getUser = async (req, res)=>{
 export const getSingleUser =async (req,res)=>{
         try {
             const id= req.params.id
-            const users = await userModel.findById(id)
-            if (!users) {
+            const user = await userModel.findById(id)
+            if (!user) {
                 return res.status(404).json({message: "users not found"})
                 
             }
-            return res.status(200).json({users:users,message:"Users fetched successfully"})
+            return res.status(200).json({user:user,message:"Users fetched successfully"})
             
         } catch (error) {
             return res.status(500).json({error: error.message})
@@ -52,7 +52,7 @@ export const putUser = async (req,res)=>{
         const updatedUser = req.body
         const users = await userModel.findByIdAndUpdate(id, updatedUser, {new: true})
         if(!users){
-            return res.status(404).json({message: "user not found "})
+            return res.status(404).json({message: "user not found "}) 
         }
         return res.status(200).json({message: "user updated successfully", users: users})
         
@@ -66,8 +66,8 @@ export const putUser = async (req,res)=>{
 export const deleteUser =async(req,res)=>{
     try {
         const id = req.params.id
-        const users = await userModel.findByIdAndDelete(id)
-        if(!users){
+        const user = await userModel.findByIdAndDelete(id)
+        if(!user){
             return res.status(404).json({message: "Cannot delete non-existent user"})
         }
         return res.status(200).json({message: "User sucessfully deleted"})
