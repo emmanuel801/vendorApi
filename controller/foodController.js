@@ -1,5 +1,4 @@
 import foodModel from '../models/foodModel.js'
-import userModel from '../models/userModel.js'
 
 
 
