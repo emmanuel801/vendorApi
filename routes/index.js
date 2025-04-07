@@ -1,7 +1,7 @@
 import { Router } from "express";
-import userRoute from './routes/userRoute.js'
-import vendorRoute from './routes/vendorRoute.js'
-import foodRoute from '.routes/foodRoute.js'
+import userRoute from './userRoute.js'
+import vendorRoute from './vendorRoute.js'
+import foodRoute from './foodRoute.js'
 
 
 
