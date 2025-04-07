@@ -1,18 +1,22 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import router from "./routes/index.js"
+// import router from "../routes/index.js"
 
-app.use('/api/v1', router)
+// app.use('/api/v1', router)
 
 dotenv.config();
 export const app = express();
 const port = process.env.PORT  || 4001
 app.use(express.json())
+
+
                    
 // app.listen(port, ()=>{
 //     console.log(`server listening on ${port}`)
 // })
+
+
 
 mongoose.connect(process.env.MONGO_URI)
    .then(()=>{
