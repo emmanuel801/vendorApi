@@ -10,4 +10,4 @@ router.put("/users/:id",putFood)
 router.post("/users",createFood)
 router.delete("/users",deleteFood)
 
-  
+export default router;
