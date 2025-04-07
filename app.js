@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import router from "../routes/index.js"
 
-app.use('/api/v1', router)
+router.use('/api/v1', router)
 
 dotenv.config();
 export const app = express();
